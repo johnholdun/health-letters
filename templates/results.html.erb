@@ -1,0 +1,23 @@
+<%= Components::Header.render props %>
+
+<div class="results">
+  <div class="results__inner">
+    <h1 class="results__title">
+      <%= props[:title] %>
+    </h1>
+
+    <% props[:results].each do |place| %>
+      <article id="<%= place[:slug] %>">
+        <h1><%= place[:name] %></h1>
+        <p class="grade" data-grade="<%= place[:grade] %>">
+          <%= %w(A B C).include?(place[:grade]) ? place[:grade] : '?' %>
+        </p>
+        <p class="address">
+          <%= place[:address] %>
+        </p>
+      </article>
+    <% end %>
+  </div>
+</div>
+
+<%= Components::Credits.render %>

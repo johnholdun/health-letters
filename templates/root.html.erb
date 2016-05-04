@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      <%= page_title %>
+    </title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/application.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600" />
+  </head>
+  <body>
+    <%= props[:base_component].render props %>
+    <script src="/application.js"></script>
+  </body>
+</html>

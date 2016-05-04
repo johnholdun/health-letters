@@ -1,0 +1,34 @@
+<div class="splash">
+  <h1 class="splash__title">
+    Health Letters
+  </h1>
+
+  <p class="splash__nut">
+    Find NYC restaurant grades near&nbsp;you.
+  </p>
+
+  <form class="splash__form" data-js="geolocate-form" action="/search" method="post">
+    <button class="btn splash__form__geolocate" data-js="search-form-button">
+      Find restaurants near me
+    </button>
+  </form>
+
+  <form class="splash__form" action="/search" method="post">
+    <label htmlFor="zipCode">
+      Or search by ZIP Code
+    </label>
+
+    <input
+      id="zipCode"
+      name="zipCode"
+      type="text"
+      value="<%= props[:zip_code] %>"
+    />
+
+    <button class="btn">
+      Search
+    </button>
+  </form>
+
+  <%= Components::Credits.render modifier: 'credits--splash' %>
+</div>

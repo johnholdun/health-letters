@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background: #f9f9f9;
+  color: #111;
+  font-family: "Titillium Web";
+  font-weight: 600;
+}
+
+.masthead {
+  padding: 0 1rem;
+  background: #067;
+  overflow: hidden;
+  position: relative;
+}
+
+@media(min-width: 30rem) {
+  .masthead {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+.masthead:before {
+  content: " ";
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50%;
+  background: #067;
+}
+
+.masthead__brand {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1rem;
+  font-size: 2rem;
+  line-height: 4rem;
+  color: #fff;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.masthead__brand a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.masthead__form {
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+}
+
+.results {
+  background: #f9f9f9;
+  z-index: 1;
+  position: relative;
+}
+
+.results__inner {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.results__title {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0 0.5rem;
+  line-height: 3rem;
+  height: 3rem;
+  font: inherit;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.5);
+  color: #067;
+}
+
+input[type="text"]:focus {
+  outline: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.masthead__form__button {
+  display: block;
+  font: inherit;
+  border: 0;
+  background: url("/locate.svg") no-repeat center right;
+  background-size: 60%;
+  width: 4rem;
+  height: 4rem;
+  text-indent: 5rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+article {
+  position: relative;
+  padding-right: 4rem;
+  margin-bottom: 1rem;
+}
+
+.grade {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: sans-serif;
+  background: #fff;
+  color: #444;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px #ccc;
+}
+
+[data-grade="A"] {
+  color: #3A66FF;
+}
+
+[data-grade="B"] {
+  color: #40D861;
+}
+
+[data-grade="C"] {
+  color: #E7933A;
+}
+
+.address {
+  color: #555;
+}
+
+.splash {
+  background: #067;
+  color: #fff;
+  padding: 3rem 1rem 0;
+  min-height: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.splash:before {
+  content: " ";
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #067;
+}
+
+.splash__title {
+  font-size: 3rem;
+  line-height: 3rem;
+  text-indent: -2px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.splash__nut {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.btn {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid currentColor;
+  padding: 0 1rem;
+  border-radius: 3px;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.btn:active {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.splash__form__geolocate {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  font-size: 1rem;
+  display: block;
+  margin: 3rem 0;
+  width: 100%;
+  border: 1px solid currentColor;
+  padding: 0 1rem;
+  border-radius: 3px;
+  line-height: 3rem;
+}
+
+.splash__form__geolocate:before {
+  content: " ";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  background: url("/locate.svg") no-repeat center center;
+  background-size: 100%;
+  margin-top: -0.2rem;
+}
+
+.credits {
+  background: #f9f9f9;
+  padding: 0 1rem 1rem;
+}
+
+.credits:before {
+  content: " ";
+  display: block;
+  border-top: 1px solid currentColor;
+  margin-bottom: 2rem;
+}
+
+@media(min-width: 30rem) {
+  .credits {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+.credits--splash {
+  background: none;
+  margin: 3rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.credits p {
+  margin-bottom: 1rem;
+}
+
+.credits a {
+  color: #067;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.credits--splash a {
+  color: inherit;
+}
